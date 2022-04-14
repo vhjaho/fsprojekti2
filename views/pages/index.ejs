@@ -1,0 +1,38 @@
+<!-- views/pages/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% include ../partials/head %>
+  </head>
+  <body class="container">
+    <header><% include ../partials/header %></header>
+
+    <main>
+      <div class="jumbotron">
+        <table class="table table-bordered">
+          <tr>
+            <td>Location: <%= location.name %></td>
+          </tr>
+          <tr>
+            <td>Time: <%= location.localtime %></td>
+          </tr>
+          <tr>
+            <td>Weather: <%= current.weather_descriptions %></td>
+          </tr>
+          <tr>
+            <td>Wind Speed: <%= current.wind_speed %></td>
+          </tr>
+          <tr>
+            <td>Humidity: <%= current.humidity %></td>
+          </tr>
+          <tr>
+            <td>Temperature: <%= current.temperature %></td>
+          </tr>
+        </table>
+      </div>
+    </main>
+
+    <footer><% include ../partials/footer %></footer>
+  </body>
+</html>
